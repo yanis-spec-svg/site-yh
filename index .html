@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bonjour</title>
+
+<style>
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(#f7efe5, #fbe4ec);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  max-width: 420px;
+  text-align: center;
+  display: none;
+}
+
+.card.active {
+  display: block;
+}
+
+h1 {
+  color: #c06c84;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 26px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  background: #f4a6b8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e38fa2;
+}
+
+img {
+  width: 120px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CARD 1 -->
+<div class="card active" id="card1">
+  <h1>Bonjour Hanane 🌸</h1>
+  <button onclick="showCard2()">🎁 Gift for you</button>
+</div>
+
+<!-- CARD 2 -->
+<div class="card" id="card2">
+  <img src="https://fleurexcel.com/cdn/shop/files/9e0945bab32329b6068cf5765b8f17d0.jpg?v=1739324729&width=1200" alt="Rose">
+  <p><strong>Here is your reply, you beautiful rose 🌹</strong></p>
+  <button onclick="showCard3()">💌 A message for you</button>
+</div>
+
+<!-- CARD 3 -->
+<div class="card" id="card3">
+  <p>
+    I know that studying far from home is not easy,<br>
+    and that the road can be tiring at times 🚶‍♀️<br><br>
+
+    But your strength and persistence are truly admirable 🌱<br><br>
+
+    Keep going,<br>
+    you are doing great — I believe in you 🌸✨
+  </p>
+</div>
+
+<script>
+function showCard2() {
+  document.getElementById("card1").classList.remove("active");
+  document.getElementById("card2").classList.add("active");
+}
+
+function showCard3() {
+  document.getElementById("card2").classList.remove("active");
+  document.getElementById("card3").classList.add("active");
+}
+</script>
+
+</body>
+</html>
